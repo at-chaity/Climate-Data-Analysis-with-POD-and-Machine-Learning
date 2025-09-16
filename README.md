@@ -15,19 +15,17 @@ The aim is to demonstrate how POD-based reduced-order representations improve mo
   - **T2M** → Temperature at 2 meters (°C)  
   - **RH2M** → Relative Humidity at 2 meters (%)  
   - **PRECTOTCORR** → Precipitation corrected (mm/day)  
-- Constructed a **snapshot matrix** \( X \in \mathbb{R}^{m \times n} \) where:  
-  - \( m = 15 \) variables/locations  
-  - \( n = 5844 \) daily samples  
+- Constructed a **snapshot matrix** $$\( X \in \mathbb{R}^{m \times n} \)$$ where:  
+  - $$\( m = 15 \)$$ variables/locations  
+  - $$\( n = 5844 \)$$ daily samples  
 
 ---
 
 ### 2. Proper Orthogonal Decomposition (POD)
 - Applied **Singular Value Decomposition (SVD)**:  
-  \[
-  X = U \Sigma V^T
-  \]  
+     X = U $$\Sigma$$ $$V^{T}$$   
 - Retained **10 dominant modes** to capture most of the system’s variance.  
-- Extracted **temporal coefficients** \( C \) from \( V^T \), used as reduced features.  
+- Extracted **temporal coefficients** \( C \) from  $$\( V^{T} \)$$, used as reduced features.  
 
 ---
 
